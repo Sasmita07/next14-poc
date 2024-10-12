@@ -10,7 +10,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <header style={{backgroundColor: 'lightblue'}}>
+          Website Home Header
+        </header>
+        {children}
+        <footer style={{bottom:0, position:'absolute',
+          backgroundColor: 'grey', paddingTop: '1pt', paddingBottom: '1pt', width:'100%'}}>
+            <p>©Sas Next.js POC Home Footer</p>
+        </footer>
+      </body>
     </html>
   )
 }

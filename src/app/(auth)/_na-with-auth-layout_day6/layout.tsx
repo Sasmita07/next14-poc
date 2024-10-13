@@ -1,4 +1,4 @@
-export default function AuthLayout({children }: {children: React.ReactNode}){
+export default function NAAuthLayout({children }: {children: React.ReactNode}){
     return (
         <>
          <p style={{color: 'purple', marginTop: '2rem'}}>Auth Layout Example:</p>

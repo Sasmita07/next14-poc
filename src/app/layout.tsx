@@ -20,7 +20,7 @@ export default function RootLayout({
           Website Home Header
         </header>
         {children}
-        <footer style={{bottom:0, position:'absolute',
+        <footer style={{bottom:0, position:'fixed',
           backgroundColor: 'grey', paddingTop: '1pt', paddingBottom: '1pt', width:'100%'}}>
             <p>©Sas Next.js POC Home Footer</p>
         </footer>

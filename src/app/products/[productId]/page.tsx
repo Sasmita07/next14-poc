@@ -7,7 +7,7 @@ type PageProps = {
 } 
 
 export const generateMetadata = async ({params}: PageProps): Promise<Metadata> => {
-    const title = await new Promise((resolve, _) => {
+    const title = await new Promise((resolve) => {
         setTimeout(() => resolve(`New Edition ${params.productId}`), 1000)
     })
 

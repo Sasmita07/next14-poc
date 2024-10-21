@@ -1,9 +1,13 @@
 import { products } from '../data';
+import { redirect } from 'next/navigation';
 
 export async function GET(
   _req: Request,
   { params }: { params: { id: string } }
 ) {
+  if (parseInt(params.id) > products.length) {
+    redirect('/carts');
+  }
   const product = products.find(
     (product) => product.id === parseInt(params.id)
   );

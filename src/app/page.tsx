@@ -6,5 +6,7 @@ export default function Home() {
          <Link href='/blog'> Blog</Link>
          <br/>
          <Link href='/products'> Products</Link>
+         <br/>
+         <Link href='/dashboard'> Dashboard</Link>
     </>
 }

@@ -1,3 +1,4 @@
+import { ThemeProvider } from '@/components/theme-provider';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -15,6 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <ThemeProvider>
       <body>
         <header style={{backgroundColor: 'lightblue'}}>
           Website Home Header
@@ -25,6 +27,7 @@ export default function RootLayout({
             <p>©Sas Next.js POC Home Footer</p>
         </footer>
       </body>
+      </ThemeProvider>
     </html>
   )
 }

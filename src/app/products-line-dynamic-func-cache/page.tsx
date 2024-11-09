@@ -7,7 +7,7 @@ type Product = {
   description: string;
 };
 
-export default async function ProductLine() {
+export default async function ProductLineCachingAfterDynamicFunc() {
   const response = await fetch('http://localhost:3001/products');
   const products = await response.json();
   const cookiesStore = cookies();

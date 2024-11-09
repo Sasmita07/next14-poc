@@ -1,6 +1,3 @@
-// route segment configuration
-export const fetchCache = 'default-cache';
-
 type Product = {
   id: number;
   title: string;
@@ -8,18 +5,14 @@ type Product = {
   description: string;
 };
 
-export default async function ProductLineOptOutCache() {
-  // Placing Before
-  // const detailResponse = await fetch('http://localhost:3001/products/1');
-  // const productDetail = await detailResponse.json();
+export default async function ProductLineCacheRevalidate() {
   const response = await fetch('http://localhost:3001/products', {
-    cache: 'no-store',
+    next: {
+      revalidate: 10,
+    },
   });
   const products = await response.json();
 
-  // Placing after
-  const detailResponse = await fetch('http://localhost:3001/products/1');
-  const productDetail = await detailResponse.json();
   return (
     <>
       <ul className="space-y-4 p-4">
@@ -31,7 +24,6 @@ export default async function ProductLineOptOutCache() {
             <h2 className="text-xl font-semibold">{product.title}</h2>
             <p>{product.description}</p>
             <p className="text-lg font-medium">${product.price}</p>
-            <p>{productDetail.price}</p>
           </li>
         ))}
       </ul>

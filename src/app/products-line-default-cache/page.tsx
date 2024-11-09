@@ -8,7 +8,7 @@ type Product = {
   description: string;
 };
 
-export default async function ProductLine() {
+export default async function ProductLineDefaultCache() {
   // Placing Before
   // const detailResponse = await fetch('http://localhost:3001/products/1');
   // const productDetail = await detailResponse.json();
